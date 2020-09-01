@@ -9,8 +9,8 @@ router.get('/new', (req, res) => {
   res.render('posts/new', { post: new Post() });
 });
 
-router.get('/:id', async (req, res) => {
-  const post = await Post.findById(req.params.id);
+router.get('/:slug', async (req, res) => {
+  const post = await Post.findOne({ slug: req.params.slug });
   if(post == null) {
     res.redirect('/');
   }
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
 
   try {
     post = await post.save(); // will add an 'id' to our post
-    res.redirect(`/posts/${post.id}`);
+    res.redirect(`/posts/${post.slug}`);
   } catch(e) {
     console.log(e);
     res.render('posts/new', { post: post });

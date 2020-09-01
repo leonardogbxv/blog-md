@@ -9,6 +9,7 @@ require('dotenv/config');
 // Connect to DB
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
+mongoose.set('useCreateIndex', true);
 mongoose.connect(process.env.DB_CONNECTION, () => console.log('connected to DB!'));
 
 // view engine setup
