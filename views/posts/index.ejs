@@ -13,7 +13,7 @@
   <div class="container mw-6 p-5 align-middle">
     
     <% posts.forEach(post => { %>
-      <a href="posts/<%= post.slug %>" class="text-decoration-none">
+      <a href="posts/<%= post.slug %>" class="a-off">
         <article class="text-dark-gray cursor-pointer">
           <h4 class="font-weight-bold mb-1"><%= post.title %></h5>
           <h5 class="font-weight-normal text-muted mb-0"><%= post.category %></h6>
@@ -22,6 +22,7 @@
           <!-- 24 AGO 2020 -->
           <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
             <button type="submit" class="btn btn-danger">Delete</button>
+            <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
           </form> 
           <hr class="mt-2" />
         </article> 

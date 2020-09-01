@@ -18,3 +18,8 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+.a-off {
+  color: inherit!important;
+  text-decoration: none!important;
+}
