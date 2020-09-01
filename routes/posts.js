@@ -26,12 +26,17 @@ router.post('/', async (req, res) => {
   });
 
   try {
-    post = await post.save(); // will add an 'id' to our post
+    post = await post.save();
     res.redirect(`/posts/${post.slug}`);
   } catch(e) {
     console.log(e);
     res.render('posts/new', { post: post });
   }
+});
+
+router.delete('/:id', async (req, res) => {
+  await Post.findByIdAndDelete(req.params.id);
+  res.redirect('/');
 });
 
 module.exports = router;

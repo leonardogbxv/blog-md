@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
 const postRouter = require('./routes/posts');
 const Post = require('./models/post')
 
@@ -18,6 +19,9 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: false }));
+
+// Allows the use of PUT/DELETE overriding other methods
+app.use(methodOverride('_method'));
 
 // index.ejs
 app.get('/', async (req, res) => {

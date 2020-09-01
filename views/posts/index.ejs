@@ -20,6 +20,9 @@
           <p class="font-weight-light text-muted mt-1 mb-1"><%= post.description %></p>
           <div class="font-weight-lighter text-muted small mt-1 mb-1"><%= post.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit'}) %></div>
           <!-- 24 AGO 2020 -->
+          <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form> 
           <hr class="mt-2" />
         </article> 
       </a>
