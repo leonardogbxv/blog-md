@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="/stylesheets/custom.css" type="text/css" />
   <title>Blog MD</title>
 </head>
-<body>
+<body class="bg-lighter">
   <%- include('_header') %> 
   
-  <div class="container mw-6 p-5 align-middle">
+  <div class="container mw-6 p-5 align-middle bg-light">
     
     <% posts.forEach(post => { %>
       <a href="posts/<%= post.slug %>" class="a-off">
         <article class="text-dark-gray cursor-pointer">
-          <h4 class="font-weight-bold mb-1"><%= post.title %></h5>
-          <h5 class="font-weight-normal text-muted mb-0"><%= post.category %></h6>
-          <p class="font-weight-light text-muted mt-1 mb-1"><%= post.description %></p>
-          <div class="font-weight-lighter text-muted small mt-1 mb-1"><%= post.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit'}) %></div>
+          <h3 class="font-weight-bold mb-1"><%= post.title %></h3>
+          <h5 class="font-weight-normal text-muted mb-1"><%= post.category %></h5>
+          <p class="font-weight-light text-muted mb-1"><%= post.description %></p>
+          <div class="font-weight-lighter text-muted small mb-1"><%= post.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit'}) %></div>
           <!-- 24 AGO 2020 -->
-          <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+          <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="mb-1">
             <button type="submit" class="btn btn-danger">Delete</button>
             <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
           </form> 
