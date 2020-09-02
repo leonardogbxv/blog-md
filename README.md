@@ -19,7 +19,7 @@ Project dependencies and for what they were used for.
 - [**Nodemon:**](https://github.com/remy/nodemon "**Nodemon:**") Automatically refresh our web page when file changes are made.
 - [**Express:**](https://github.com/expressjs/express "**Express:**") Allow us to create our server.
 - [**Mongoose:**](https://github.com/Automattic/mongoose "**Mongoose:**") MongoDB object modeling.
-- [** EJS:**](https://github.com/mde/ejs "** EJS:**") Template engine.
+- [**EJS:**](https://github.com/mde/ejs "** EJS:**") Template engine.
 - [**Marked:**](https://github.com/markedjs/marked "**Marked:**") Markdown parser and compiler.
 - [**Slugify:**](https://www.npmjs.com/package/slugify "**Slugify:**") Converts a string to a slug.
 - [**method-override:**](https://github.com/expressjs/method-override "**method-override:**") Use _PUT/DELETE/..._ in places where the client doesn't support it.
