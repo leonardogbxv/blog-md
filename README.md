@@ -17,7 +17,7 @@ $ npm run dev
 Project dependencies and for what they were used for.
 
 - [**Nodemon:**](https://github.com/remy/nodemon "**Nodemon:**") Automatically refresh our web page when file changes are made.
-- [**Express:**](https://github.com/expressjs/express "**Express:**") Allow us to create our server.
+- [**Express:**](https://github.com/expressjs/express "**Express:**") Nodejs web application server framework.
 - [**Mongoose:**](https://github.com/Automattic/mongoose "**Mongoose:**") MongoDB object modeling.
 - [**EJS:**](https://github.com/mde/ejs "** EJS:**") Template engine.
 - [**Marked:**](https://github.com/markedjs/marked "**Marked:**") Markdown parser and compiler.
