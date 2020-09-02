@@ -16,7 +16,7 @@
     <a href="/" class="btn btn btn-secondary mb">Todos os Posts</a>
     <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
     <div>
-      <%= post.markdown %> 
+      <%- post.sanitizedHTML %> 
     </div>
   </div>  
 </body>
