@@ -16,15 +16,15 @@ $ npm run dev
 
 Project dependencies and for what they were used for.
 
-- [**Nodemon:**](https://github.com/remy/nodemon "**Nodemon:**") Automatically refresh our web page when file changes are made.
-- [**Express:**](https://github.com/expressjs/express "**Express:**") Nodejs web application server framework.
-- [**Mongoose:**](https://github.com/Automattic/mongoose "**Mongoose:**") MongoDB object modeling.
-- [**EJS:**](https://github.com/mde/ejs "** EJS:**") Template engine.
-- [**Marked:**](https://github.com/markedjs/marked "**Marked:**") Markdown parser and compiler.
-- [**Slugify:**](https://www.npmjs.com/package/slugify "**Slugify:**") Converts a string to a slug.
-- [**method-override:**](https://github.com/expressjs/method-override "**method-override:**") Use _PUT/DELETE/..._ in places where the client doesn't support it.
-- [**Dompurify:**](https://github.com/cure53/DOMPurify "**Dompurify:**") Sanitizes HTML and prevents XSS attacks
-- [**JSDom:**](https://github.com/jsdom/jsdom "**JSDom:**") Render HTML inside of Node.js
+- [**Nodemon:**](https://github.com/remy/nodemon "**Nodemon:**") Automatically refresh our web page when file changes are made;
+- [**Express:**](https://github.com/expressjs/express "**Express:**") "..provide small, robust tooling for HTTP servers";
+- [**Mongoose:**](https://github.com/Automattic/mongoose "**Mongoose:**") MongoDB object modeling;
+- [**EJS:**](https://github.com/mde/ejs "** EJS:**") Template engine;
+- [**Marked:**](https://github.com/markedjs/marked "**Marked:**") Markdown parser and compiler;
+- [**Slugify:**](https://www.npmjs.com/package/slugify "**Slugify:**") Converts a string to a slug;
+- [**method-override:**](https://github.com/expressjs/method-override "**method-override:**") Use _PUT/DELETE/..._ in places where the client doesn't support it;
+- [**Dompurify:**](https://github.com/cure53/DOMPurify "**Dompurify:**") Sanitizes HTML and prevents XSS attacks;
+- [**JSDom:**](https://github.com/jsdom/jsdom "**JSDom:**") Render HTML inside of Node.js.
 
 ```bash
 $ npm i --save-dev nodemon
