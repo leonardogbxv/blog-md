@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
+const connectDB = require('./db');
 const methodOverride = require('method-override');
 const postRouter = require('./routes/posts');
 const Post = require('./models/post')
@@ -8,10 +8,7 @@ const Post = require('./models/post')
 require('dotenv/config');
 
 // Connect to DB
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useUnifiedTopology', true);
-mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.DB_CONNECTION, () => console.log('connected to DB!'));
+connectDB();
 
 // view engine setup
 app.set('view engine', 'ejs');
