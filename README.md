@@ -37,7 +37,7 @@ $ npm i dompurify jsdom
 
 - [x] Add post slug
 - [x] Add XSS sanitizer
-- [ ] Add admin and users routes
+- [ ] Add admin authentication 
 - [ ] Add Disqus
 - [ ] Deploy
 - [ ] ...
