@@ -7,7 +7,7 @@ const createDOMPurify = require('dompurify');
 const { JSDOM } = require('jsdom');
 const DOMPurify = createDOMPurify(new JSDOM().window);
 
-const PostSchema = new mongoose.Schema({
+const postSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -40,7 +40,7 @@ const PostSchema = new mongoose.Schema({
 });
 
 // validations
-PostSchema.pre('validate', function(next) {
+postSchema.pre('validate', function(next) {
   // create slug based on the 'post title'
   if(this.title) {
     this.slug = slugify(this.title, { lower: true, strict: true});
@@ -53,4 +53,4 @@ PostSchema.pre('validate', function(next) {
   next();
 });
 
-module.exports = mongoose.model('Post', PostSchema);
+module.exports = mongoose.model('Post', postSchema);

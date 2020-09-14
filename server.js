@@ -3,7 +3,8 @@ const app = express();
 const connectDB = require('./db');
 const methodOverride = require('method-override');
 const postRouter = require('./routes/posts');
-const Post = require('./models/post')
+const adminRouter = require('./routes/admin');
+const Post = require('./models/post');
 
 require('dotenv/config');
 
@@ -15,35 +16,19 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false}));
 app.use(express.static('public'));
 
-app.use(express.urlencoded({ extended: false }));
-
 // Allows the use of PUT/DELETE overriding other methods
 app.use(methodOverride('_method'));
 
-// index.ejs
+// Main route
 app.get('/', async (req, res) => {
-  // const posts = [{
-  //   title: 'Post title',
-  //   category: 'Post category',
-  //   description: 'Post description..',
-  //   createdAt: new Date()
-  // },
-  // {
-  //   title: 'Post title2',
-  //   category: 'Post category2',
-  //   description: 'Post description..2',
-  //   createdAt: new Date()
-  // }
-  // ];
-
   const posts = await Post.find().sort({ createdAt: 'desc' });
 
   res.render('posts/index', { posts: posts });
 });
 
-// Routes created in 'postRouter' will be added to '/posts' route
-// Ex: '/posts/new', '/posts/edit', ...
+// Routes
 app.use('/posts', postRouter);
+app.use('/admin', adminRouter);
 
 // Start listening to the server
 app.listen(3000);
