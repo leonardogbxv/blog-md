@@ -7,7 +7,17 @@
     <nav class="nav justify-content-center">
       <a href="/" class="nav-link text-light figure-caption">Blog</a>
       <a href="https://github.com/leonardogbxv/blog-md" class="nav-link text-light figure-caption">Github</a>
-      <a href="/posts/new" class="nav-link text-light figure-caption">New post</a>
+
+      <% if(userId) { %> 
+        <a href="/posts/new" class="nav-link text-primary figure-caption">New post</a>
+      <% } %>
     </nav>
   </div>
+
+  <% if(userId) { %> 
+    <form action="/admin/logout" method="POST" class="session-auth">
+      <div class="bg-success text-light small">Admin logged!</div>
+      <button class="bg-danger text-light small mt-2">Logout</button>
+    </form>
+  <% } else %>
 </header>

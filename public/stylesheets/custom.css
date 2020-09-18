@@ -31,3 +31,22 @@
 .h-title {
   font-size: 3rem;
 }
+
+.session-auth {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.3);
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .5rem;
+  padding: .4rem;
+  margin: .5rem;
+}
+
+.session-auth > * {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: .2rem;
+  padding: 0.3rem;
+}

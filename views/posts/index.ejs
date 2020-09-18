@@ -20,10 +20,13 @@
           <p class="font-weight-light text-muted mb-1"><%= post.description %></p>
           <div class="font-weight-lighter text-muted small mb-1"><%= post.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit'}) %></div>
           <!-- 24 AGO 2020 -->
-          <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="mb-1">
-            <button type="submit" class="btn btn-danger">Delete</button>
-            <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
-          </form> 
+          <% if(userId) { %> 
+            <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="mb-1">
+              <button type="submit" class="btn btn-danger">Delete</button>
+              <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
+            </form> 
+          <% } %>
+          
           <hr class="mt-2" />
         </article> 
       </a>

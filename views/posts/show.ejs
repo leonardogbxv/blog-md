@@ -15,7 +15,11 @@
     <h3 class="font-weight-bold mb-1"><%= post.title %></h1>
     <div class="text-muted mb-2"><%= post.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit'}) %></div>
     <a href="/" class="btn btn btn-secondary mb">Todos os Posts</a>
-    <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
+
+    <% if(userId) { %> 
+      <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
+    <% } %>
+    
     <div class="min-vh-100">
       <%- post.sanitizedHTML %> 
     </div>

@@ -1,26 +1,30 @@
-// posts.js                                    //
 // All routes directly related to our '/posts' //
 const express = require('express');
 const router = express.Router();
 const Post = require('./../models/post');
-const { findById } = require('./../models/post');
 
 // Relative to '/posts' route in server.js
 router.get('/new', (req, res) => {
-  res.render('posts/new', { post: new Post() });
+  const { userId } = req.session;
+
+  res.render('posts/new', { post: new Post(), userId: userId });
 });
 
 router.get('/edit/:id', async (req, res) => {
   const post = await Post.findById(req.params.id);
-  res.render('posts/edit', { post: post });
+  const { userId } = req.session;
+
+  res.render('posts/edit', { post: post, userId: userId });
 });
 
 router.get('/:slug', async (req, res) => {
   const post = await Post.findOne({ slug: req.params.slug });
+  const { userId } = req.session;
+
   if(post == null) {
     res.redirect('/');
   }
-  res.render('posts/show', { post: post });
+  res.render('posts/show', { post: post, userId: userId });
 });
 
 // Post route to create a new blog 'post'

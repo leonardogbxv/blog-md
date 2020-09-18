@@ -8,26 +8,29 @@
   <title>Blog MD</title>
 </head>
 <body class="bg-lighter">
-  <%- include('posts/_header') %>
+  <%- include('./posts/_header') %>
   
   <div class="container mw-6 p-5 align-middle bg-light">
-    <div class="text-dark-gray cursor-pointer">
+    <div class="text-dark-gray cursor-pointer min-vh-100">
       <h3 class="font-weight-bold mb-1">Administration</h3>
       <hr class="mt-2" />
-      <form action="" method="get">
+
+      <form action="/admin" method="POST">
         <div class="form-group">
           <label for="login">Login</label>
-          <input required value="" type="text" name="login" id="login" class = "form-control"/>
+          <input required type="text" name="login" class ="form-control" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input required value="" type="password" name="password" id="password" class = "form-control"/>
+          <input required type="password" name="password" class ="form-control" />
         </div>        
-        <button type="submit" class="btn btn-dark">Login</button>
+        <button type="submit" class="btn btn-dark">Sign In</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
       </form>
+
     </div>
   </div>
   
-  <%- include('posts/_footer.ejs') %> 
+  <%- include('./posts/_footer.ejs') %> 
 </body>
 </html> 
