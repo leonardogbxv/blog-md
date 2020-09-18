@@ -24,20 +24,15 @@ Project dependencies and for what they were used for.
 - [**Slugify:**](https://www.npmjs.com/package/slugify "**Slugify:**") Converts a string to a slug;
 - [**method-override:**](https://github.com/expressjs/method-override "**method-override:**") Use _PUT/DELETE/..._ in places where the client doesn't support it;
 - [**Dompurify:**](https://github.com/cure53/DOMPurify "**Dompurify:**") Sanitizes HTML and prevents XSS attacks;
-- [**JSDom:**](https://github.com/jsdom/jsdom "**JSDom:**") Render HTML inside of Node.js.
+- [**JSDom:**](https://github.com/jsdom/jsdom "**JSDom:**") Render HTML inside of Node.js;
+- [**express-session:**](https://www.npmjs.com/package/express-session "**express-session:**") Assign an unique session to identify the user (in this case, the admin).
+- [**dotenv:**](https://www.npmjs.com/package/express-session "**dotenv:**") Environment variables.
 
-```bash
-$ npm i --save-dev nodemon
-$ npm i express mongoose ejs
-$ npm i marked slugify
-$ npm i method-override
-$ npm i dompurify jsdom
-```
 ## Todo 📝
 
 - [x] Add post slug
 - [x] Add XSS sanitizer
-- [ ] Add admin authentication 
+- [x] Add admin session authentication
 - [ ] Add Disqus
 - [ ] Deploy
 - [ ] ...
