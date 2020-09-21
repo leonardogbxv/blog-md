@@ -33,6 +33,7 @@ Project dependencies and for what they were used for.
 - [x] Add post slug
 - [x] Add XSS sanitizer
 - [x] Add admin session authentication
+- [ ] Add image upload
 - [ ] Add Disqus
 - [ ] Deploy
 - [ ] ...
