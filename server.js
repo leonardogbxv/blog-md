@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const postRouter = require('./routes/posts');
 const adminRouter = require('./routes/admin');
 const Post = require('./models/post');
+const { formatDate } = require('./public/js/formatDate');
 
 // dotenv config
 try {
@@ -46,7 +47,7 @@ app.get('/', async (req, res) => {
   const { userId } = req.session;
   // console.log('index:'+req.sessionID);
 
-  res.render('posts/index', { posts: posts, userId: userId});
+  res.render('posts/index', { posts: posts, userId: userId, formatDate: formatDate });
 });
 
 // Routes

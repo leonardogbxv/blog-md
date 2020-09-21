@@ -2,19 +2,20 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('./../models/post');
+const { formatDate } = require('../public/js/formatDate');
 
 // Relative to '/posts' route in server.js
 router.get('/new', (req, res) => {
   const { userId } = req.session;
 
-  res.render('posts/new', { post: new Post(), userId: userId });
+  res.render('posts/new', { post: new Post(), userId: userId, formatDate: formatDate });
 });
 
 router.get('/edit/:id', async (req, res) => {
   const post = await Post.findById(req.params.id);
   const { userId } = req.session;
 
-  res.render('posts/edit', { post: post, userId: userId });
+  res.render('posts/edit', { post: post, userId: userId, formatDate: formatDate });
 });
 
 router.get('/:slug', async (req, res) => {
@@ -24,7 +25,7 @@ router.get('/:slug', async (req, res) => {
   if(post == null) {
     res.redirect('/');
   }
-  res.render('posts/show', { post: post, userId: userId });
+  res.render('posts/show', { post: post, userId: userId, formatDate: formatDate });
 });
 
 // Post route to create a new blog 'post'

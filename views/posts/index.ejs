@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/stylesheets/custom.css" type="text/css" />
+  <link rel="stylesheet" href="/stylesheets/css/custom.css" type="text/css" />
   <title>Blog MD</title>
 </head>
 <body class="bg-lighter">
-  <%- include('_header') %> 
+  <%- include('_header') %>
   
   <div class="container mw-6 p-5 align-middle bg-light">
     
@@ -18,7 +18,7 @@
           <h3 class="font-weight-bold mb-1"><%= post.title %></h3>
           <h5 class="font-weight-normal text-muted mb-1"><%= post.category %></h5>
           <p class="font-weight-light text-muted mb-1"><%= post.description %></p>
-          <div class="font-weight-lighter text-muted small mb-1"><%= post.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit'}) %></div>
+          <div class="font-weight-lighter text-muted small mb-1"><%= formatDate(post.createdAt) %></div>
           <!-- 24 AGO 2020 -->
           <% if(userId) { %> 
             <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="mb-1">
@@ -33,7 +33,7 @@
     <% }); %>
     
   </div>
-  
-  <%- include('_footer.ejs') %> 
+
+  <%- include('_footer.ejs') %>
 </body>
 </html> 
