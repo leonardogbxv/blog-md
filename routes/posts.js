@@ -3,9 +3,10 @@ const express = require('express');
 const router = express.Router();
 const Post = require('./../models/post');
 const { formatDate } = require('../public/js/formatDate');
+const validation = require("../public/js/validation");
 
 // Relative to '/posts' route in server.js
-router.get('/new', (req, res) => {
+router.get('/new', validation.redirectLogin, (req, res) => {
   const { userId } = req.session;
 
   res.render('posts/new', { post: new Post(), userId: userId, formatDate: formatDate });
@@ -30,7 +31,7 @@ router.get('/:slug', async (req, res) => {
 
 // Post route to create a new blog 'post'
 router.post('/', async (req, res, next) => {
-  req.post = new Post();
+  req.post = await new Post();
   next();
 }, savePost('new'));
 
