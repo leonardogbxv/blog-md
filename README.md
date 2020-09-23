@@ -27,13 +27,14 @@ Project dependencies and for what they were used for.
 - [**JSDom:**](https://github.com/jsdom/jsdom "**JSDom:**") Render HTML inside of Node.js;
 - [**express-session:**](https://www.npmjs.com/package/express-session "**express-session:**") Assign an unique session to identify the user (in this case, the admin).
 - [**dotenv:**](https://www.npmjs.com/package/express-session "**dotenv:**") Environment variables.
+- [**Multer:**](https://www.npmjs.com/package/express-session "**Multer:**") Node.js middleware for handling multipart/form-data, used for uploading files.
 
 ## Todo 📝
 
 - [x] Add post slug
 - [x] Add XSS sanitizer
 - [x] Add admin session authentication
-- [ ] Add image upload
+- [x] Add image upload
 - [ ] Add Disqus
 - [ ] Deploy
 - [ ] ...
