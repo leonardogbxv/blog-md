@@ -8,24 +8,25 @@
   <title>Blog MD</title>
 </head>
 <body class="bg-lighter">
-  <%- include('_header') %> 
+  <%- include('../partials/_header') %> 
   
   <div class="container mw-6 p-5 align-middle bg-light">
 
-    <h3 class="font-weight-bold mb-1"><%= post.title %></h1>
+    <h3 class="font-weight-bold mb-1"><%= post.title %></h3>
     <div class="text-muted mb-2"><%= formatDate(post.createdAt) %></div>
-    <a href="/" class="btn btn btn-secondary mb">Todos os Posts</a>
+    <a href="/" class="btn btn btn-secondary mb-2">Todos os Posts</a>
 
     <% if(userId) { %> 
       <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
     <% } %>
     
     <div class="min-vh-100">
+      <img width="800" height="400" src="../uploads/images/<%= post.image %>" alt="blog-img" class="img-fluid rounded mb-1" />
       <%- post.sanitizedHTML %> 
     </div>
     
   </div>
   
-  <%- include('_footer.ejs') %> 
+  <%- include('../partials/_footer.ejs') %>
 </body>
 </html> 

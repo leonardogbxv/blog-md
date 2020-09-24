@@ -1,9 +1,13 @@
 <div class="form-group">
+  <label for="image">Image</label>
+  <input value="<%= post.image %>" type="text" name="image" id="image" class ="form-control" placeholder="example.jpg/png" />
+</div>
+<div class="form-group">
   <label for="title">Title</label>
   <input required value="<%= post.title %>" type="text" name="title" id="title" class = "form-control"/>
 </div>
 <div class="form-group">
-  <label for="title">Category</label>
+  <label for="category">Category</label>
   <input required value="<%= post.category %>" type="text" name="category" id="category" class = "form-control"/>
 </div>
 <div class="form-group">

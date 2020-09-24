@@ -7,7 +7,7 @@ const validation = require("../public/js/validation");
 
 // Multer middleware (files upload)
 const storage = multer.diskStorage({
-  destination: 'public/images/uploads/',
+  destination: 'public/uploads/images/',
   filename: function (req, file, cb) {
     // generate a random 16 character string
     crypto.randomBytes(16, (err, buf) => {
@@ -58,6 +58,7 @@ router.post('/upload', validation.redirectLogin, upload.single('blog-img'), (req
     console.log('File received!');
     return res.json(req.file);
   }
+
 });
 
 router.post('/logout', validation.redirectLogin, (req, res) => {

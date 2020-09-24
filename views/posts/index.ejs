@@ -8,13 +8,16 @@
   <title>Blog MD</title>
 </head>
 <body class="bg-lighter">
-  <%- include('_header') %>
+  <%- include('../partials/_header') %>
   
   <div class="container mw-6 p-5 align-middle bg-light">
     
     <% posts.forEach(post => { %>
       <a href="posts/<%= post.slug %>" class="a-off">
         <article class="text-dark-gray cursor-pointer">
+          <div class="d-block">
+            <img width="800" height="400" src="../uploads/images/<%= post.image %>" alt="blog-img" class="img-fluid rounded mb-1" />
+          </div>
           <h3 class="font-weight-bold mb-1"><%= post.title %></h3>
           <h5 class="font-weight-normal text-muted mb-1"><%= post.category %></h5>
           <p class="font-weight-light text-muted mb-1"><%= post.description %></p>
@@ -34,6 +37,6 @@
     
   </div>
 
-  <%- include('_footer.ejs') %>
+  <%- include('../partials/_footer.ejs') %>
 </body>
 </html> 

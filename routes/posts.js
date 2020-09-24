@@ -49,7 +49,8 @@ router.delete('/:id', async (req, res) => {
 // Save blog 'post' and redirect (middleware)
 function savePost(path) {
   return async (req, res) => {
-    let post = req.post
+    let post = req.post;
+    post.image = req.body.image,
     post.title = req.body.title,
     post.category = req.body.category,
     post.description = req.body.description,

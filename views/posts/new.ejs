@@ -8,15 +8,17 @@
   <title>Blog MD</title>
 </head>
 <body class="bg-lighter">
-  <%- include('_header') %> 
+  <%- include('../partials/_header') %> 
   
   <div class="container mw-6 p-5 align-middle bg-light">
-    <h3 class="font-weight-bold mb-3">New Post</h1>
+    <h3 class="font-weight-bold mb-3">New Post</h3>
+    <!-- <hr class="mt-2" /> -->
+
     <form action="/posts" method="post">
-      <%- include('_form_content') %> 
+      <%- include('../partials/_form_content') %> 
     </form>
   </div>
   
-  <%- include('_footer.ejs') %> 
+  <%- include('../partials/_footer.ejs') %> 
 </body>
 </html> 

@@ -8,14 +8,13 @@
   <title>Blog MD</title>
 </head>
 <body class="bg-lighter">
-  <%- include('../posts/_header') %>
+  <%- include('../partials/_header') %>
   
   <div class="container mw-6 p-5 align-middle bg-light">
     <div class="text-dark-gray cursor-pointer min-vh-100">
-      <h3 class="font-weight-bold mb-1">Administration</h3>
-      <hr class="mt-2" />
+      <h3 class="font-weight-bold mb-3">Upload images</h3>
+      <!-- <hr class="mt-2" /> -->
 
-      <h4 class="font-weight-bold mb-3">Upload images</h4>      
       <form action="/admin/upload" method="post" enctype="multipart/form-data">
         <div class="input-group mb-3">
           <input type="file" accept="image/*" name="blog-img" >
@@ -26,6 +25,6 @@
     </div>
   </div>
 
-  <%- include('../posts/_footer.ejs') %>
+  <%- include('../partials/_footer.ejs') %>
 </body>
 </html>
