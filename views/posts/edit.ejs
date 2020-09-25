@@ -10,7 +10,7 @@
 <body class="bg-lighter">
   <%- include('../partials/_header') %> 
   
-  <div class="container mw-6 p-5 align-middle bg-light">
+  <div class="container mw-6 p-5 align-middle bg-light container-shadow">
     <h3 class="font-weight-bold mb-3">Edit Post</h1>
     <form action="/posts/<%= post.id %>?_method=PUT" method="post">
       <%- include('../partials/_form_content') %> 

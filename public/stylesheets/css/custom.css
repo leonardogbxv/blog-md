@@ -86,3 +86,17 @@
   
   opacity: 0.8;
 }
+
+.custom-img-banner {
+	position: relative;
+  width: auto;
+  height: auto;
+  margin-left: -48px;
+  margin-right: -48px;
+}
+
+.custom-img-banner img {
+  width: 100%;
+  max-height: 490px;
+  object-fit: cover;
+}
