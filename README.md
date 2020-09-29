@@ -35,7 +35,7 @@ Project dependencies and for what they were used for.
 - [x] Add XSS sanitizer
 - [x] Add admin session authentication
 - [x] Add image upload
-- [ ] Add posts pagination
+- [x] Add posts pagination
 - [ ] Add Disqus
 - [ ] Deploy
 - [ ] ...
