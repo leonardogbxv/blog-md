@@ -43,11 +43,21 @@ app.use(session({
 
 // Main route
 app.get('/', async (req, res) => {
-  const posts = await Post.find().sort({ createdAt: 'desc' });
-  const { userId } = req.session;
-  // console.log('index:'+req.sessionID);
+  const page = parseInt(req.query.page) || 1;
+  const limit = 7;
+  const skip = (limit * page) - limit;
+  const totalPosts = await Post.countDocuments();
 
-  res.render('posts/index', { posts: posts, userId: userId, formatDate: formatDate });
+  const posts = await Post.find().sort({ createdAt: 'desc' }).skip(skip).limit(limit);
+  const { userId } = req.session;
+
+  res.render('posts/index', { 
+    posts: posts, 
+    userId: userId,
+    currentPage: page,
+    totalPages: Math.ceil(totalPosts / limit),
+    formatDate: formatDate 
+  });
 });
 
 // Routes
