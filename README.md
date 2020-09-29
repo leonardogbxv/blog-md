@@ -36,6 +36,6 @@ Project dependencies and for what they were used for.
 - [x] Add admin session authentication
 - [x] Add image upload
 - [x] Add posts pagination
-- [ ] Add Disqus
+- [ ] Integrate Disqus
 - [ ] Deploy
 - [ ] ...
