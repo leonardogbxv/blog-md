@@ -41,14 +41,14 @@
 
     <% if(totalPages) { %>
       <nav aria-label="..." class="">
-        <ul class="pagination">
+        <ul class="pagination m-0">
           <!-- FIRST Page -->
-          <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+          <li class="page-item mr-1 <%= currentPage === 1 ? 'disabled' : '' %>">
             <a class="page-link" href="?page=1" tabindex="-1" aria-disabled="true">First</a>
           </li>
           <!-- PREVIOUS Page -->
           <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
-            <a class="page-link" href="?page=<%= currentPage - 1 %>" tabindex="-1" aria-disabled="true">&#60 Prev</a>
+            <a class="page-link" href="?page=<%= currentPage - 1 %>" tabindex="-1" aria-disabled="true"><span>&#8592;</span></a>
           </li>
           <!-- PAGES -->
           <% let i = (Number(currentPage) > 5 ? Number(currentPage) - 4 : 1) %>
@@ -75,10 +75,10 @@
           <% } %>
           <!-- NEXT Page -->
           <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
-            <a class="page-link" href="?page=<%= currentPage + 1 %>">Next &#62</a>
+            <a class="page-link" href="?page=<%= currentPage + 1 %>"><span>&#8594;</span></a>
           </li>
           <!-- LAST Page -->
-          <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+          <li class="page-item ml-1 <%= currentPage === totalPages ? 'disabled' : '' %>">
             <a class="page-link" href="?page=<%= totalPages %>" tabindex="-1" aria-disabled="true">Last</a>
           </li>
         </ul>

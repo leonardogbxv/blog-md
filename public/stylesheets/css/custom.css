@@ -100,3 +100,33 @@
   max-height: 490px;
   object-fit: cover;
 }
+
+/* Custom pagination */
+.page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+  color:#6c757d;
+}
+
+.page-link:focus {
+  box-shadow:0 0 0 .2rem rgba(17, 17, 17, 0.3);
+}
+
+.page-item.active .page-link {
+  background-color:#333;
+  border-color:#333;
+}
+.page-item.disabled .page-link{
+  color:#6c757d;
+  background-color:#fff;
+  border-color:#dee2e6;
+}
