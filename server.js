@@ -65,4 +65,6 @@ app.use('/posts', postRouter);
 app.use('/admin', adminRouter);
 
 // Start listening to the server
-app.listen(process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
+app.listen(port);
+console.log(`Server is listening to port ${port}`);
