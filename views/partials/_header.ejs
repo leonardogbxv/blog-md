@@ -1,19 +1,19 @@
 <header class="bg-gray pt-3 pb-3">
   <div class="text-light text-center pt-5 pb-5">
     <h1 class="font-weight-normal h-title">
-      <a href="/" class="a-off">Blog MD</a>
+      <a href="/" class="a-off">Blog <div class="text-info text-decoration-none d-inline">MD</a></a>
     </h1>
     <p class="text-white-50">Some text here for now...</p>
-    <nav class="nav justify-content-center">
-      <a href="/" class="nav-link text-light figure-caption">Blog</a>
-      <a href="https://github.com/leonardogbxv/blog-md" class="nav-link text-light figure-caption">Github</a>
+    <nav class="nav justify-content-center text-light">
+      <a href="/" class="nav-link figure-caption a-off">Blog</a>
+      <a href="https://github.com/leonardogbxv/blog-md" class="nav-link figure-caption a-off">Github</a>
 
       <% if(userId) { %> 
-        <a href="/posts/new" class="nav-link text-primary figure-caption">New post</a>
+        <a href="/posts/new" class="nav-link figure-caption text-info">New post</a>
       <% } %>
 
       <% if(userId) { %> 
-        <a href="/admin/upload" class="nav-link text-primary figure-caption">Upload</a>
+        <a href="/admin/upload" class="nav-link figure-caption text-info">Upload</a>
       <% } %>
     </nav>
   </div>

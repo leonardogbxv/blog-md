@@ -22,7 +22,7 @@
             </div>
           <% } %> 
           
-          <h3 class="font-weight-bold mb-1"><%= post.title %></h3>
+          <a href="posts/<%= post.slug %>" class="a-off"><h3 class="font-weight-bold mb-1"><%= post.title %></h3></a>
           <h5 class="font-weight-normal text-muted mb-1"><%= post.category %></h5>
           <p class="font-weight-light text-muted mb-1"><%= post.description %></p>
           <div class="font-weight-lighter text-muted small mb-1"><%= formatDate(post.createdAt) %></div>

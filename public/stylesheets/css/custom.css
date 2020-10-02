@@ -26,6 +26,15 @@
 .a-off {
   color: inherit!important;
   text-decoration: none!important;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  -ms-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+}
+
+.a-off:hover {
+  color: #17a2b8!important;
 }
 
 .bg-lighter {
