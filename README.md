@@ -26,8 +26,9 @@ Project dependencies and for what they were used for.
 - [**Dompurify:**](https://github.com/cure53/DOMPurify "**Dompurify:**") Sanitizes HTML and prevents XSS attacks;
 - [**JSDom:**](https://github.com/jsdom/jsdom "**JSDom:**") Render HTML inside of Node.js;
 - [**express-session:**](https://www.npmjs.com/package/express-session "**express-session:**") Assign an unique session to identify the user (in this case, the admin).
-- [**dotenv:**](https://www.npmjs.com/package/express-session "**dotenv:**") Environment variables.
-- [**Multer:**](https://www.npmjs.com/package/express-session "**Multer:**") Node.js middleware for handling multipart/form-data, used for uploading files.
+- [**memorystore:**](https://www.npmjs.com/package/memorystore "**memorystore:**") Session store for express (without leaks version).
+- [**dotenv:**](https://www.npmjs.com/package/dotenv "**dotenv:**") Environment variables.
+- [**Multer:**](https://www.npmjs.com/package/multer "**Multer:**") Node.js middleware for handling multipart/form-data, used for uploading files.
 
 ## Todo 📝
 
@@ -37,5 +38,4 @@ Project dependencies and for what they were used for.
 - [x] Add image upload
 - [x] Add posts pagination
 - [ ] Integrate Disqus
-- [ ] Deploy
 - [ ] ...
