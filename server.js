@@ -49,6 +49,15 @@ app.use(session({
   })
 }));
 
+// HTTPS redirect
+app.use((req, res, next) => {
+  if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) {
+    res.redirect(`https://${req.hostname}${req.url}`);
+  } else {
+    next();
+  }
+});
+
 // Main route
 app.get('/', async (req, res) => {
   const page = parseInt(req.query.page) || 1;
