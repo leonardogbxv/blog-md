@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+const MemoryStore = require('memorystore')(session);
 const app = express();
 const connectDB = require('./db');
 const methodOverride = require('method-override');
@@ -29,6 +30,10 @@ app.use(methodOverride('_method'));
 // session config
 const IN_PROD = process.env.NODE_ENV === 'production';
 
+/* If you have a node server behind a proxy enable this. */
+/* It will trust the first proxy of the environment, this way node can set cookies for you. */
+// app.set('trust proxy', 1); 
+
 app.use(session({
   name: process.env.SESS_NAME,
   resave: false,
@@ -38,13 +43,16 @@ app.use(session({
     maxAge: Number(process.env.SESS_TIME),
     sameSite: true,
     secure: IN_PROD,
-  }
+  },
+  store: new MemoryStore({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  })
 }));
 
 // Main route
 app.get('/', async (req, res) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = 7;
+  const limit = 7; // Limit of posts per page
   const skip = (limit * page) - limit;
   const totalPosts = await Post.countDocuments();
 
