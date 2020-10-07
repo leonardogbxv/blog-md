@@ -27,11 +27,31 @@
     <% } %>
     
     <div class="min-vh-100">
-      <%- post.sanitizedHTML %> 
+      <%- post.sanitizedHTML %>
+      
+      <div id="disqus_thread"></div>
     </div>
     
   </div>
   
   <%- include('../partials/_footer.ejs') %>
+
+  <!-- Disqus script -->
+  <script>
+    // var disqus_shortname = "blog-md";
+    
+    // var disqus_config = function () {
+    // this.page.url = 'https://blog-md/posts/<%= post.slug %>'; 
+    // this.page.identifier = '<%= post.id %>';
+    // };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://blog-md.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <!-- Disqus script -->
 </body>
 </html> 
