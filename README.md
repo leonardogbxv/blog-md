@@ -2,6 +2,20 @@
 
 Markdown based blog using Node.js and MongoDB. It uses [marked](http://https://github.com/markedjs/marked "marked") library to parse and compile markdown.
 
+## Features
+
+A simple useful blog system, you can handle all your needs without leaving the site.
+
+- Admin session store
+- Admin login/logout
+- Create new posts
+- Upload images/files to the server
+- Edit posts
+- Delete posts
+- Blog pagination
+- Disqus comment system
+- ...
+
 ## Installation
 
 [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -29,6 +43,9 @@ Project dependencies and for what they were used for.
 - [**memorystore:**](https://www.npmjs.com/package/memorystore "**memorystore:**") Session store for express (without leaks version).
 - [**dotenv:**](https://www.npmjs.com/package/dotenv "**dotenv:**") Environment variables.
 - [**Multer:**](https://www.npmjs.com/package/multer "**Multer:**") Node.js middleware for handling multipart/form-data, used for uploading files.
+- [**Bootstrap:**](https://getbootstrap.com/docs/4.5/getting-started/introduction/ "**Bootstrap:**") Front-end framework with a giant collection of handy CSS codes.
+
+
 
 ## Todo 📝
 
@@ -37,5 +54,5 @@ Project dependencies and for what they were used for.
 - [x] Add admin session authentication
 - [x] Add image upload
 - [x] Add posts pagination
-- [ ] Integrate Disqus
+- [x] Integrate Disqus
 - [ ] ...
