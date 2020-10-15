@@ -26,6 +26,19 @@ $ npm install
 $ npm run dev
 ```
 
+### Enviroment variables
+```js
+DB_CONNECTION= // db address
+PORT= // server port
+NODE_ENV= // development or production
+SESS_NAME= // session name
+SESS_SECRET= // session secret
+SESS_TIME= // session time expiration
+APP_ID= // store session user id
+APP_LOGIN= // admin login
+APP_PWD= // admin password
+```
+
 ## Dependencies
 
 Project dependencies and for what they were used for.
