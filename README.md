@@ -2,6 +2,15 @@
 
 Markdown based blog using Node.js and MongoDB. It uses [marked](http://https://github.com/markedjs/marked "marked") library to parse and compile markdown.
 
+<img src="https://i.imgur.com/mwb0ziG.png" style="width: 100px"/>
+
+<details>
+<summary>Admin view</summary>
+<pre>
+<img src="https://i.imgur.com/s5hlokI.png" style="width: 100px"/>
+</pre>
+</details>
+
 ## Features
 
 A simple useful blog system, you can handle all your needs without leaving the site.
@@ -14,7 +23,6 @@ A simple useful blog system, you can handle all your needs without leaving the s
 - Simple and flexible pagination according to the limit of posts per page.
 - Disqus comment hosting service for discussions and comment posts on the blog.
 - ...
-- ..
 
 ## Installation
 
