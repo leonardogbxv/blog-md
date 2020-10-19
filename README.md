@@ -7,10 +7,10 @@ Markdown based blog using Node.js and MongoDB. It uses [marked](http://https://g
 A simple useful blog system, you can handle all your needs without leaving the site.
 
 - Administrator login/logout to save/clear admin sessions on the blog. By logging in, you have access to all the blog's administrative functionalities:
- - Create new posts with a thumbnail, title, category, description and markdown content;
- - Delete button to get rid of specific posts;
- - Edit button to modify specific posts;
- - Upload images/files to the server so you can use it in posts thumbnails, banners, content, ...
+  - Create new posts with a thumbnail, title, category, description and markdown content;
+  - Delete button to get rid of specific posts;
+  - Edit button to modify specific posts;
+  - Upload images/files to the server so you can use it in posts thumbnails, banners, blog content, ...
 - Simple and flexible pagination according to the limit of posts per page.
 - Disqus comment hosting service for discussions and comment posts on the blog.
 - ...
