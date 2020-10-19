@@ -1,5 +1,5 @@
 {
-  "name": "blog-md",
+  "name": "blog-tsu",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "author": "",
+  "author": "Leonardo GB",
   "license": "ISC",
   "dependencies": {
     "dompurify": "^2.0.14",
