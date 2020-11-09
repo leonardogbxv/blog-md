@@ -3,18 +3,20 @@
 Markdown based blog using Node.js and MongoDB. It uses [marked](http://https://github.com/markedjs/marked "marked") library to parse and compile markdown.
 <hr>
 <details open>
+  <summary>Admin view <sub><sup>(click here)</sup></sub></summary>
+<pre>
+<img src="https://i.imgur.com/s5hlokI.png" />
+</pre>
+</details>
+
+<details>
 <summary>User view</summary>
 <pre>
 <img src="https://i.imgur.com/mwb0ziG.png" />
 </pre>
 </details>
 
-<details>
-  <summary>Admin view <sub><sup>(click here)</sup></sub></summary>
-<pre>
-<img src="https://i.imgur.com/s5hlokI.png" />
-</pre>
-</details>
+
 
 ## Features
 
